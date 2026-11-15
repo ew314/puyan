@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Support · Puyan Teleprompter</title>
+<style>
+:root{
+  --bg:#fbfbfd; --fg:#1d1d1f; --muted:#6e6e73; --line:#e3e3e8;
+  --card:#ffffff; --accent:#0a58d0; --chipbg:#f2f2f5;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f0f12; --fg:#f2f2f4; --muted:#9b9ba1; --line:#2a2a30;
+         --card:#17171b; --accent:#6fa8ff; --chipbg:#1e1e24; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+       "Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.bar{
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  padding:14px 20px; border-bottom:1px solid var(--line);
+  position:sticky; top:0; background:var(--bg); z-index:5;
+}
+.brand{font-weight:650; letter-spacing:-.01em; color:var(--fg); font-size:16px}
+.brand:hover{text-decoration:none}
+.bar .sp{flex:1}
+select{
+  font:inherit; font-size:14px; color:var(--fg); background:var(--chipbg);
+  border:1px solid var(--line); border-radius:9px; padding:7px 10px;
+}
+nav{display:flex; gap:6px; padding:10px 20px 0; flex-wrap:wrap}
+nav a{
+  font-size:14px; color:var(--muted); padding:6px 12px; border-radius:999px;
+}
+nav a.on{background:var(--chipbg); color:var(--fg); font-weight:600}
+nav a:hover{text-decoration:none; color:var(--fg)}
+main{max-width:720px; margin:0 auto; padding:22px 20px 8px}
+h1{font-size:30px; line-height:1.24; letter-spacing:-.02em; margin:18px 0 6px}
+h2{font-size:17px; line-height:1.4; margin:30px 0 8px; letter-spacing:-.01em}
+p{margin:0 0 11px; color:var(--fg)}
+.sub{color:var(--muted); font-size:14px; margin-bottom:26px}
+.who{color:var(--muted); font-size:14px; margin:0 0 2px}
+footer{
+  max-width:720px; margin:0 auto; padding:26px 20px 60px;
+  border-top:1px solid var(--line); color:var(--muted); font-size:13px;
+}
+footer p{margin:0 0 6px; color:var(--muted)}
+.cards{display:grid; gap:12px; margin:28px 0 10px}
+.card{
+  display:block; background:var(--card); border:1px solid var(--line);
+  border-radius:14px; padding:16px 18px; color:var(--fg);
+}
+.card:hover{text-decoration:none; border-color:var(--accent)}
+.card b{display:block; font-size:16px; margin-bottom:2px}
+.card span{color:var(--muted); font-size:14px}
+section[data-lang]{display:none}
+section[data-lang].cur{display:block}
+/* ⛔ 没有 JS 时（脚本被拦、审核爬虫、老浏览器）必须还有一页可读的东西。
+   只写 section[data-lang]{display:none} 会让整页白屏 —— 审核点进来是空的，
+   直接判「隐私政策页打不开」。所以默认放英文出来，JS 一跑就交给 .cur 管。 */
+html:not([data-js]) section[data-lang="en"]{display:block}
+@media (max-width:520px){
+  h1{font-size:25px}
+  main{padding:18px 16px 4px}
+  .bar{padding:12px 16px}
+  nav{padding:8px 16px 0}
+  footer{padding:22px 16px 50px}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a class="brand" href="index.html">Puyan Teleprompter</a>
+  <div class="sp"></div>
+  <select id="lang" aria-label="Language">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="pt">Português</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="it">Italiano</option>
+      <option value="zh-Hans">简体中文</option>
+      <option value="zh-Hant">繁體中文</option>
+  </select>
+</div>
+<nav>
+  <a href="privacy.html" data-nav="privacy">Privacy</a>
+  <a href="terms.html" data-nav="terms">Terms</a>
+  <a href="support.html" class="on" data-nav="support">Support</a>
+  <a href="index.html" data-nav="idx">Home</a>
+</nav>
+<main>
+<section data-lang="en" lang="en" data-title="Support · Puyan Teleprompter">
+<h1>Support</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>How do I get a script in?</h2>
+<p>One box, three ways: type into it, paste into it, or tap Import and pick a file — .txt, .md, .srt, .vtt, .docx or .pdf.</p>
+<p>Then press Save. Long paragraphs are split for you — there is a button for paragraph-sized blocks and one for sentence-sized blocks.</p>
+<h2>Why does the pointer sometimes sit half a sentence behind?</h2>
+<p>Speech is recognised in short chunks, so the pointer arrives with a small delay. That is deliberate: it never jumps backwards because of one misheard word.</p>
+<p>If someone is talking next to you, recognition gets noticeably worse — but the script still will not run away from where you are.</p>
+<h2>Can I use a Bluetooth foot pedal?</h2>
+<p>Yes, if the pedal sends standard keys: Page Up, Page Down, arrow keys, or F13–F24. Those need no extra setup.</p>
+<p>Pedals that work by pressing the volume buttons do not work, because iOS does not pass volume presses to apps. Check the product page for the words Page Up or Page Down before buying.</p>
+<h2>Does it need internet?</h2>
+<p>No. The speech model is downloaded once at first launch. After that the app works fully offline — airplane mode is fine.</p>
+<h2>Which languages can it follow?</h2>
+<p>Voice following is English only in this release. The interface itself is available in nine languages, including Chinese, Spanish, Portuguese, French, German, Russian and Italian.</p>
+<h2>I changed phones. Do I pay again?</h2>
+<p>No. Press Restore Purchases with the same Apple ID.</p>
+<p>Scripts are stored on the device and are not synced between devices, so keep your source documents.</p>
+<h2>How do I get a refund?</h2>
+<p>Ask Apple at reportaproblem.apple.com. We cannot process refunds — Apple handles the payment, not us.</p>
+<h2>Something is broken. Who do I tell?</h2>
+<p>ew314ew@gmail.com</p>
+<p>Include your iOS version, the device model, and what you did just before it went wrong.</p>
+</section>
+<section data-lang="es" lang="es" data-title="Soporte · Puyan Teleprompter">
+<h1>Soporte</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>¿Cómo meto un guion?</h2>
+<p>Una caja, tres formas: escribe dentro, pega dentro, o toca Importar y elige un archivo — .txt, .md, .srt, .vtt, .docx o .pdf.</p>
+<p>Luego pulsa Guardar. Los párrafos largos se dividen solos: hay un botón para bloques tipo párrafo y otro para bloques tipo frase.</p>
+<h2>¿Por qué el puntero a veces va media frase por detrás?</h2>
+<p>El habla se reconoce en fragmentos cortos, así que el puntero llega con un pequeño retraso. Es a propósito: nunca retrocede por una palabra mal oída.</p>
+<p>Si alguien habla a tu lado, el reconocimiento empeora bastante, pero el guion no se te escapa del punto donde estás.</p>
+<h2>¿Puedo usar un pedal Bluetooth?</h2>
+<p>Sí, si el pedal envía teclas estándar: Page Up, Page Down, flechas o F13–F24. Esas no necesitan configuración.</p>
+<p>Los pedales que funcionan pulsando los botones de volumen no sirven, porque iOS no pasa esas pulsaciones a las apps. Antes de comprar, busca Page Up o Page Down en la ficha del producto.</p>
+<h2>¿Necesita internet?</h2>
+<p>No. El modelo de voz se descarga una vez en el primer inicio. Después la app funciona totalmente sin conexión; el modo avión va bien.</p>
+<h2>¿En qué idiomas puede seguir?</h2>
+<p>En esta versión el seguimiento por voz es solo en inglés. La interfaz está en nueve idiomas, incluidos chino, español, portugués, francés, alemán, ruso e italiano.</p>
+<h2>Cambié de teléfono. ¿Pago otra vez?</h2>
+<p>No. Pulsa Restaurar compras con el mismo Apple ID.</p>
+<p>Los guiones se guardan en el dispositivo y no se sincronizan, así que conserva tus documentos originales.</p>
+<h2>¿Cómo pido un reembolso?</h2>
+<p>Pídelo a Apple en reportaproblem.apple.com. Nosotros no podemos tramitarlo: el pago lo gestiona Apple.</p>
+<h2>Algo no funciona. ¿A quién aviso?</h2>
+<p>ew314ew@gmail.com</p>
+<p>Incluye tu versión de iOS, el modelo del dispositivo y lo que hiciste justo antes del fallo.</p>
+</section>
+<section data-lang="pt" lang="pt" data-title="Suporte · Puyan Teleprompter">
+<h1>Suporte</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>Como coloco um roteiro?</h2>
+<p>Uma caixa, três formas: digite nela, cole nela, ou toque em Importar e escolha um arquivo — .txt, .md, .srt, .vtt, .docx ou .pdf.</p>
+<p>Depois toque em Salvar. Parágrafos longos são divididos para você: há um botão para blocos do tamanho de parágrafo e outro para blocos do tamanho de frase.</p>
+<h2>Por que o ponteiro às vezes fica meia frase atrás?</h2>
+<p>A fala é reconhecida em trechos curtos, então o ponteiro chega com um pequeno atraso. Isso é proposital: ele nunca volta por causa de uma palavra mal ouvida.</p>
+<p>Se alguém estiver falando ao seu lado, o reconhecimento piora bastante, mas o roteiro não foge do ponto em que você está.</p>
+<h2>Posso usar um pedal Bluetooth?</h2>
+<p>Sim, se o pedal enviar teclas padrão: Page Up, Page Down, setas ou F13–F24. Essas não precisam de configuração.</p>
+<p>Pedais que funcionam apertando os botões de volume não servem, porque o iOS não repassa esses toques aos apps. Antes de comprar, procure Page Up ou Page Down na página do produto.</p>
+<h2>Precisa de internet?</h2>
+<p>Não. O modelo de fala é baixado uma vez na primeira abertura. Depois o app funciona totalmente offline; modo avião serve.</p>
+<h2>Em quais idiomas ele acompanha?</h2>
+<p>Nesta versão o acompanhamento por voz é só em inglês. A interface está em nove idiomas, incluindo chinês, espanhol, português, francês, alemão, russo e italiano.</p>
+<h2>Troquei de celular. Pago de novo?</h2>
+<p>Não. Toque em Restaurar compras com o mesmo Apple ID.</p>
+<p>Os roteiros ficam no aparelho e não são sincronizados, então guarde seus documentos originais.</p>
+<h2>Como peço reembolso?</h2>
+<p>Peça à Apple em reportaproblem.apple.com. Não conseguimos processar reembolso: quem cobra é a Apple.</p>
+<h2>Algo quebrou. Com quem falo?</h2>
+<p>ew314ew@gmail.com</p>
+<p>Inclua sua versão do iOS, o modelo do aparelho e o que você fez logo antes do problema.</p>
+</section>
+<section data-lang="fr" lang="fr" data-title="Assistance · Puyan Teleprompter">
+<h1>Assistance</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>Comment importer un texte ?</h2>
+<p>Une seule zone, trois façons : tapez dedans, collez dedans, ou touchez Importer et choisissez un fichier — .txt, .md, .srt, .vtt, .docx ou .pdf.</p>
+<p>Puis touchez Enregistrer. Les longs paragraphes sont découpés pour vous : un bouton pour des blocs de la taille d'un paragraphe, un autre pour des blocs de la taille d'une phrase.</p>
+<h2>Pourquoi le curseur reste-t-il parfois une demi-phrase en retard ?</h2>
+<p>La parole est reconnue par petits fragments, le curseur arrive donc avec un léger retard. C'est voulu : il ne recule jamais à cause d'un mot mal entendu.</p>
+<p>Si quelqu'un parle à côté de vous, la reconnaissance se dégrade nettement, mais le texte ne s'échappe pas de l'endroit où vous êtes.</p>
+<h2>Puis-je utiliser une pédale Bluetooth ?</h2>
+<p>Oui, si la pédale envoie des touches standard : Page Up, Page Down, flèches ou F13–F24. Celles-là ne demandent aucun réglage.</p>
+<p>Les pédales qui fonctionnent en appuyant sur les boutons de volume ne marchent pas, car iOS ne transmet pas ces appuis aux apps. Avant d'acheter, cherchez Page Up ou Page Down sur la fiche du produit.</p>
+<h2>Faut-il internet ?</h2>
+<p>Non. Le modèle vocal est téléchargé une fois au premier lancement. Ensuite l'app fonctionne entièrement hors ligne ; le mode avion suffit.</p>
+<h2>Quelles langues peut-il suivre ?</h2>
+<p>Dans cette version, le suivi vocal est uniquement en anglais. L'interface est disponible en neuf langues, dont le chinois, l'espagnol, le portugais, le français, l'allemand, le russe et l'italien.</p>
+<h2>J'ai changé de téléphone. Je repaie ?</h2>
+<p>Non. Touchez Restaurer les achats avec le même identifiant Apple.</p>
+<p>Les textes sont stockés sur l'appareil et ne sont pas synchronisés : gardez vos documents d'origine.</p>
+<h2>Comment obtenir un remboursement ?</h2>
+<p>Demandez-le à Apple sur reportaproblem.apple.com. Nous ne pouvons pas le traiter : c'est Apple qui encaisse.</p>
+<h2>Quelque chose ne marche pas. À qui le dire ?</h2>
+<p>ew314ew@gmail.com</p>
+<p>Indiquez votre version d'iOS, le modèle de l'appareil et ce que vous veniez de faire.</p>
+</section>
+<section data-lang="de" lang="de" data-title="Hilfe · Puyan Teleprompter">
+<h1>Hilfe</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>Wie bekomme ich ein Skript hinein?</h2>
+<p>Ein Feld, drei Wege: hineintippen, hineinkopieren, oder Importieren antippen und eine Datei wählen — .txt, .md, .srt, .vtt, .docx oder .pdf.</p>
+<p>Dann Speichern antippen. Lange Absätze werden für dich geteilt — ein Knopf für absatzgroße Blöcke, einer für satzgroße Blöcke.</p>
+<h2>Warum hängt der Zeiger manchmal einen halben Satz zurück?</h2>
+<p>Sprache wird in kurzen Stücken erkannt, deshalb kommt der Zeiger mit kleiner Verzögerung. Das ist Absicht: er springt wegen eines falsch gehörten Wortes nie zurück.</p>
+<p>Wenn neben dir jemand spricht, wird die Erkennung deutlich schlechter — aber das Skript läuft dir nicht weg.</p>
+<h2>Kann ich ein Bluetooth-Fußpedal nutzen?</h2>
+<p>Ja, wenn das Pedal Standardtasten sendet: Page Up, Page Down, Pfeiltasten oder F13–F24. Die brauchen keine Einrichtung.</p>
+<p>Pedale, die über die Lautstärketasten arbeiten, funktionieren nicht, weil iOS Lautstärkedrücke nicht an Apps weitergibt. Achte vor dem Kauf auf Page Up oder Page Down in der Produktbeschreibung.</p>
+<h2>Braucht es Internet?</h2>
+<p>Nein. Das Sprachmodell wird beim ersten Start einmal geladen. Danach läuft die App vollständig offline — Flugmodus ist kein Problem.</p>
+<h2>Welche Sprachen kann es führen?</h2>
+<p>In dieser Version nur Englisch. Die Oberfläche gibt es in neun Sprachen, darunter Chinesisch, Spanisch, Portugiesisch, Französisch, Deutsch, Russisch und Italienisch.</p>
+<h2>Neues Telefon. Zahle ich noch einmal?</h2>
+<p>Nein. Tippe auf Käufe wiederherstellen, mit derselben Apple-ID.</p>
+<p>Skripte liegen auf dem Gerät und werden nicht synchronisiert — behalte deine Originaldateien.</p>
+<h2>Wie bekomme ich eine Erstattung?</h2>
+<p>Über Apple unter reportaproblem.apple.com. Wir können keine Erstattung bearbeiten — kassiert hat Apple.</p>
+<h2>Etwas ist kaputt. Wem sage ich das?</h2>
+<p>ew314ew@gmail.com</p>
+<p>Bitte mit iOS-Version, Gerätemodell und dem, was du kurz davor gemacht hast.</p>
+</section>
+<section data-lang="ru" lang="ru" data-title="Поддержка · Puyan Teleprompter">
+<h1>Поддержка</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>Как добавить текст?</h2>
+<p>Одно поле, три способа: печатать в нём, вставить в него или нажать «Импорт» и выбрать файл — .txt, .md, .srt, .vtt, .docx или .pdf.</p>
+<p>Затем нажмите «Сохранить». Длинные абзацы делятся автоматически: одна кнопка даёт блоки размером с абзац, другая — размером с предложение.</p>
+<h2>Почему указатель иногда отстаёт на полфразы?</h2>
+<p>Речь распознаётся короткими кусками, поэтому указатель приходит с небольшой задержкой. Это сделано намеренно: он не откатывается назад из-за одного неверно услышанного слова.</p>
+<p>Если рядом кто-то говорит, распознавание заметно ухудшается — но текст не убегает от того места, где вы читаете.</p>
+<h2>Можно подключить Bluetooth-педаль?</h2>
+<p>Да, если педаль посылает стандартные клавиши: Page Up, Page Down, стрелки или F13–F24. Их не нужно настраивать.</p>
+<p>Педали, работающие через кнопки громкости, не подойдут: iOS не передаёт нажатия громкости приложениям. Перед покупкой ищите в описании Page Up или Page Down.</p>
+<h2>Нужен интернет?</h2>
+<p>Нет. Речевая модель скачивается один раз при первом запуске. Дальше приложение работает полностью офлайн, авиарежим подходит.</p>
+<h2>Какие языки оно сопровождает?</h2>
+<p>В этой версии голосовое сопровождение только на английском. Интерфейс доступен на девяти языках, включая китайский, испанский, португальский, французский, немецкий, русский и итальянский.</p>
+<h2>Сменил телефон. Платить снова?</h2>
+<p>Нет. Нажмите «Восстановить покупки» с тем же Apple ID.</p>
+<p>Тексты хранятся на устройстве и не синхронизируются — сохраняйте исходные документы.</p>
+<h2>Как вернуть деньги?</h2>
+<p>Через Apple: reportaproblem.apple.com. Мы не можем оформить возврат — деньги принимает Apple.</p>
+<h2>Что-то не работает. Кому сообщить?</h2>
+<p>ew314ew@gmail.com</p>
+<p>Укажите версию iOS, модель устройства и что вы делали прямо перед сбоем.</p>
+</section>
+<section data-lang="it" lang="it" data-title="Supporto · Puyan Teleprompter">
+<h1>Supporto</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>Come inserisco un testo?</h2>
+<p>Una casella, tre modi: scrivi dentro, incolla dentro, oppure tocca Importa e scegli un file — .txt, .md, .srt, .vtt, .docx o .pdf.</p>
+<p>Poi tocca Salva. I paragrafi lunghi vengono divisi per te: un pulsante per blocchi grandi come un paragrafo, uno per blocchi grandi come una frase.</p>
+<h2>Perché il cursore a volte resta mezza frase indietro?</h2>
+<p>Il parlato viene riconosciuto a pezzi brevi, quindi il cursore arriva con un piccolo ritardo. È voluto: non torna mai indietro per una parola sentita male.</p>
+<p>Se qualcuno parla accanto a te, il riconoscimento peggiora parecchio, ma il testo non scappa dal punto in cui sei.</p>
+<h2>Posso usare un pedale Bluetooth?</h2>
+<p>Sì, se il pedale invia tasti standard: Page Up, Page Down, frecce o F13–F24. Quelli non richiedono configurazione.</p>
+<p>I pedali che funzionano premendo i tasti del volume non vanno, perché iOS non passa quelle pressioni alle app. Prima di comprare, cerca Page Up o Page Down nella scheda del prodotto.</p>
+<h2>Serve internet?</h2>
+<p>No. Il modello vocale viene scaricato una volta al primo avvio. Dopo, l'app funziona completamente offline: la modalità aereo va bene.</p>
+<h2>In quali lingue può seguire?</h2>
+<p>In questa versione il seguito vocale è solo in inglese. L'interfaccia è disponibile in nove lingue, tra cui cinese, spagnolo, portoghese, francese, tedesco, russo e italiano.</p>
+<h2>Ho cambiato telefono. Pago di nuovo?</h2>
+<p>No. Tocca Ripristina acquisti con lo stesso Apple ID.</p>
+<p>I testi sono salvati sul dispositivo e non vengono sincronizzati: conserva i documenti originali.</p>
+<h2>Come chiedo un rimborso?</h2>
+<p>Chiedilo ad Apple su reportaproblem.apple.com. Non possiamo gestirlo: incassa Apple.</p>
+<h2>Qualcosa non funziona. A chi lo dico?</h2>
+<p>ew314ew@gmail.com</p>
+<p>Indica la versione di iOS, il modello del dispositivo e cosa hai fatto subito prima.</p>
+</section>
+<section data-lang="zh-Hans" lang="zh-Hans" data-title="支持 · Puyan Teleprompter">
+<h1>支持</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>稿子怎么进来？</h2>
+<p>一个框，三种进法：直接打字、粘贴、或者点 Import 选一个文件 —— .txt、.md、.srt、.vtt、.docx、.pdf。</p>
+<p>然后按 Save。长段会自动给你拆 —— 一个按钮拆成段落大小的块，一个按钮拆成句子大小的块。</p>
+<h2>为什么指针有时慢半句？</h2>
+<p>语音是一小段一小段识别的，指针会有一点延迟才跟上来。这是故意的：它不会因为听错一个字就往后跳。</p>
+<p>旁边有人说话时识别会明显变差 —— 但稿子仍然不会从你念的地方滚开。</p>
+<h2>能用蓝牙踏板吗？</h2>
+<p>能，前提是踏板发的是标准按键：Page Up、Page Down、方向键，或 F13–F24。这些不用额外设置。</p>
+<p>靠按音量键工作的踏板不行 —— iOS 不把音量按键传给 App。买之前看商品页有没有写 Page Up 或 Page Down。</p>
+<h2>要联网吗？</h2>
+<p>不要。语音模型第一次启动时下载一次，之后完全离线可用，飞行模式也没问题。</p>
+<h2>能跟读哪些语言？</h2>
+<p>这一版跟读只支持英文。界面本身有九种语言，包括中文、西班牙语、葡萄牙语、法语、德语、俄语和意大利语。</p>
+<h2>换手机了，要再付一次吗？</h2>
+<p>不用。用同一个 Apple ID 点 Restore Purchases。</p>
+<p>稿子存在设备上，不跨设备同步，所以原稿请自己留好。</p>
+<h2>怎么退款？</h2>
+<p>找 Apple：reportaproblem.apple.com。我们处理不了退款 —— 收钱的是 Apple，不是我们。</p>
+<h2>出问题了找谁？</h2>
+<p>ew314ew@gmail.com</p>
+<p>请写上你的 iOS 版本、机型和出问题前你刚做了什么。</p>
+</section>
+<section data-lang="zh-Hant" lang="zh-Hant" data-title="支援 · Puyan Teleprompter">
+<h1>支援</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>稿子怎麼進來？</h2>
+<p>一個框，三種進法：直接打字、貼上，或者點 Import 選一個檔案 —— .txt、.md、.srt、.vtt、.docx、.pdf。</p>
+<p>然後按 Save。長段會自動幫你拆 —— 一個按鈕拆成段落大小的區塊，一個按鈕拆成句子大小的區塊。</p>
+<h2>為什麼指標有時慢半句？</h2>
+<p>語音是一小段一小段辨識的，指標會有一點延遲才跟上來。這是故意的：它不會因為聽錯一個字就往後跳。</p>
+<p>旁邊有人說話時辨識會明顯變差 —— 但稿子仍然不會從你唸的地方滾開。</p>
+<h2>能用藍牙踏板嗎？</h2>
+<p>能，前提是踏板送的是標準按鍵：Page Up、Page Down、方向鍵，或 F13–F24。這些不用額外設定。</p>
+<p>靠按音量鍵工作的踏板不行 —— iOS 不把音量按鍵傳給 App。買之前看商品頁有沒有寫 Page Up 或 Page Down。</p>
+<h2>要連網嗎？</h2>
+<p>不要。語音模型第一次啟動時下載一次，之後完全離線可用，飛航模式也沒問題。</p>
+<h2>能跟讀哪些語言？</h2>
+<p>這一版跟讀只支援英文。介面本身有九種語言，包括中文、西班牙語、葡萄牙語、法語、德語、俄語和義大利語。</p>
+<h2>換手機了，要再付一次嗎？</h2>
+<p>不用。用同一個 Apple ID 點 Restore Purchases。</p>
+<p>稿子存在裝置上，不跨裝置同步，所以原稿請自己留好。</p>
+<h2>怎麼退款？</h2>
+<p>找 Apple：reportaproblem.apple.com。我們處理不了退款 —— 收錢的是 Apple，不是我們。</p>
+<h2>出問題了找誰？</h2>
+<p>ew314ew@gmail.com</p>
+<p>請寫上你的 iOS 版本、機型和出問題前你剛做了什麼。</p>
+</section>
+</main>
+<footer>
+<p data-foot="preval">Translations are provided for convenience. The English version is the binding one.</p>
+<p>Puyan Teleprompter · 2026-11-15</p>
+</footer>
+<script>
+(function(){
+  var LANGS = ["en", "es", "pt", "fr", "de", "ru", "it", "zh-Hans", "zh-Hant"];
+  var NAVTEXT = {"privacy": {"en": "Privacy", "es": "Privacidad", "pt": "Privacidade", "fr": "Confidentialité", "de": "Datenschutz", "ru": "Конфиденциальность", "it": "Privacy", "zh-Hans": "隐私", "zh-Hant": "隱私"}, "terms": {"en": "Terms", "es": "Términos", "pt": "Termos", "fr": "Conditions", "de": "Bedingungen", "ru": "Условия", "it": "Termini", "zh-Hans": "条款", "zh-Hant": "條款"}, "support": {"en": "Support", "es": "Soporte", "pt": "Suporte", "fr": "Assistance", "de": "Hilfe", "ru": "Поддержка", "it": "Supporto", "zh-Hans": "支持", "zh-Hant": "支援"}, "idx": {"en": "Home", "es": "Inicio", "pt": "Início", "fr": "Accueil", "de": "Startseite", "ru": "Главная", "it": "Home", "zh-Hans": "首页", "zh-Hant": "首頁"}};
+  var PREVAIL = {"en": "Translations are provided for convenience. The English version is the binding one.", "es": "Las traducciones se ofrecen por comodidad. La versión en inglés es la vinculante.", "pt": "As traduções são fornecidas por conveniência. A versão em inglês é a vinculante.", "fr": "Les traductions sont fournies à titre indicatif. La version anglaise fait foi.", "de": "Übersetzungen dienen nur der Bequemlichkeit. Verbindlich ist die englische Fassung.", "ru": "Переводы предоставлены для удобства. Юридическую силу имеет английская версия.", "it": "Le traduzioni sono fornite per comodità. Fa fede la versione inglese.", "zh-Hans": "其他语言仅为方便阅读的译文，以英文版本为准。", "zh-Hant": "其他語言僅為方便閱讀的譯文，以英文版本為準。"};
+  var LANGSET = {};
+  LANGS.forEach(function(c){ LANGSET[c] = 1; });
+  var KEY = 'puyan.legal.lang';
+  function pick(){
+    var q = (location.search.match(/[?&]lang=([A-Za-z-]+)/) || [])[1];
+    if(q){
+      if(q === 'zh' || q === 'zh-CN' || q === 'zh-Hans') return 'zh-Hans';
+      if(q === 'zh-TW' || q === 'zh-HK' || q === 'zh-Hant') return 'zh-Hant';
+      if(LANGSET[q]) return q;
+    }
+    try{
+      var saved = localStorage.getItem(KEY);
+      if(saved && LANGSET[saved]) return saved;
+    }catch(e){}
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    if(/^zh/i.test(nav)){
+      return /TW|HK|MO|Hant/i.test(nav) ? 'zh-Hant' : 'zh-Hans';
+    }
+    var base = nav.split('-')[0].toLowerCase();
+    return LANGSET[base] ? base : 'en';
+  }
+  function apply(code){
+    document.documentElement.setAttribute('data-js', '1');
+    var secs = document.querySelectorAll('section[data-lang]');
+    for(var i=0;i<secs.length;i++){
+      secs[i].classList.toggle('cur', secs[i].getAttribute('data-lang') === code);
+    }
+    var sel = document.getElementById('lang');
+    if(sel) sel.value = code;
+    document.documentElement.lang = code;
+    /* 标题跟着语言走，否则分享出去的卡片永远是英文标题。
+       data-title 里存的是这一语的完整标题（含品牌名），不再自己拼。 */
+    var sec = document.querySelector('section[data-lang="' + code + '"]');
+    var dt = sec ? (sec.getAttribute('data-title') || '') : '';
+    if(dt) document.title = dt;
+
+    /* 顶栏导航和页脚也跟着换：中文界面里留一排 Privacy/Terms/Support
+       看起来像没做完，而且审核点的是这一排。 */
+    var navs = document.querySelectorAll('nav a[data-nav]');
+    for(var j=0;j<navs.length;j++){
+      var key = navs[j].getAttribute('data-nav');
+      if(NAVTEXT[key] && NAVTEXT[key][code]) navs[j].textContent = NAVTEXT[key][code];
+    }
+    var fprev = document.querySelector('[data-foot="preval"]');
+    if(fprev && PREVAIL[code]) fprev.textContent = PREVAIL[code];
+    try{ localStorage.setItem(KEY, code); }catch(e){}
+  }
+  var sel = document.getElementById('lang');
+  if(sel){
+    sel.addEventListener('change', function(){ apply(sel.value); });
+  }
+  apply(pick());
+})();
+</script>
+</body>
+</html>

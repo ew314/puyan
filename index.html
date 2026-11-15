@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Puyan Teleprompter · 朴研提词器</title>
+<style>
+:root{
+  --bg:#fbfbfd; --fg:#1d1d1f; --muted:#6e6e73; --line:#e3e3e8;
+  --card:#ffffff; --accent:#0a58d0; --chipbg:#f2f2f5;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f0f12; --fg:#f2f2f4; --muted:#9b9ba1; --line:#2a2a30;
+         --card:#17171b; --accent:#6fa8ff; --chipbg:#1e1e24; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+       "Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.bar{
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  padding:14px 20px; border-bottom:1px solid var(--line);
+  position:sticky; top:0; background:var(--bg); z-index:5;
+}
+.brand{font-weight:650; letter-spacing:-.01em; color:var(--fg); font-size:16px}
+.brand:hover{text-decoration:none}
+.bar .sp{flex:1}
+select{
+  font:inherit; font-size:14px; color:var(--fg); background:var(--chipbg);
+  border:1px solid var(--line); border-radius:9px; padding:7px 10px;
+}
+nav{display:flex; gap:6px; padding:10px 20px 0; flex-wrap:wrap}
+nav a{
+  font-size:14px; color:var(--muted); padding:6px 12px; border-radius:999px;
+}
+nav a.on{background:var(--chipbg); color:var(--fg); font-weight:600}
+nav a:hover{text-decoration:none; color:var(--fg)}
+main{max-width:720px; margin:0 auto; padding:22px 20px 8px}
+h1{font-size:30px; line-height:1.24; letter-spacing:-.02em; margin:18px 0 6px}
+h2{font-size:17px; line-height:1.4; margin:30px 0 8px; letter-spacing:-.01em}
+p{margin:0 0 11px; color:var(--fg)}
+.sub{color:var(--muted); font-size:14px; margin-bottom:26px}
+.who{color:var(--muted); font-size:14px; margin:0 0 2px}
+footer{
+  max-width:720px; margin:0 auto; padding:26px 20px 60px;
+  border-top:1px solid var(--line); color:var(--muted); font-size:13px;
+}
+footer p{margin:0 0 6px; color:var(--muted)}
+.cards{display:grid; gap:12px; margin:28px 0 10px}
+.card{
+  display:block; background:var(--card); border:1px solid var(--line);
+  border-radius:14px; padding:16px 18px; color:var(--fg);
+}
+.card:hover{text-decoration:none; border-color:var(--accent)}
+.card b{display:block; font-size:16px; margin-bottom:2px}
+.card span{color:var(--muted); font-size:14px}
+section[data-lang]{display:none}
+section[data-lang].cur{display:block}
+/* ⛔ 没有 JS 时（脚本被拦、审核爬虫、老浏览器）必须还有一页可读的东西。
+   只写 section[data-lang]{display:none} 会让整页白屏 —— 审核点进来是空的，
+   直接判「隐私政策页打不开」。所以默认放英文出来，JS 一跑就交给 .cur 管。 */
+html:not([data-js]) section[data-lang="en"]{display:block}
+@media (max-width:520px){
+  h1{font-size:25px}
+  main{padding:18px 16px 4px}
+  .bar{padding:12px 16px}
+  nav{padding:8px 16px 0}
+  footer{padding:22px 16px 50px}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a class="brand" href="index.html">Puyan Teleprompter</a>
+  <div class="sp"></div>
+  <select id="lang" aria-label="Language">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="pt">Português</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="it">Italiano</option>
+      <option value="zh-Hans">简体中文</option>
+      <option value="zh-Hant">繁體中文</option>
+  </select>
+</div>
+<nav>
+  <a href="privacy.html" data-nav="privacy">Privacy</a>
+  <a href="terms.html" data-nav="terms">Terms</a>
+  <a href="support.html" data-nav="support">Support</a>
+  <a href="index.html" class="on" data-nav="idx">Home</a>
+</nav>
+<main>
+<section data-lang="en" lang="en" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">It follows your voice. When it mishears you, the script still does not jump.</p>
+<p>Speech runs on your device. No account, no upload, works in airplane mode.</p>
+<div class="cards"><a class="card" href="privacy.html"><b>Privacy</b><span>What the app does with your microphone, camera and scripts. Short answer: nothing leaves the device.</span></a><a class="card" href="terms.html"><b>Terms</b><span>One-time purchase, one-day trial, what is included, and the limits of a reading aid.</span></a><a class="card" href="support.html"><b>Support</b><span>Importing a script, Bluetooth pedals, offline use, refunds, and how to reach a human.</span></a></div>
+</section>
+<section data-lang="es" lang="es" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">Sigue tu voz. Si te oye mal, el guion no salta igual.</p>
+<p>El reconocimiento se hace en tu dispositivo. Sin cuenta, sin subir nada, funciona en modo avión.</p>
+<div class="cards"><a class="card" href="privacy.html"><b>Privacidad</b><span>Qué hace la app con tu micrófono, cámara y guiones. Respuesta corta: nada sale del dispositivo.</span></a><a class="card" href="terms.html"><b>Términos</b><span>Compra única, un día de prueba, qué incluye y los límites de una ayuda de lectura.</span></a><a class="card" href="support.html"><b>Soporte</b><span>Importar un guion, pedales Bluetooth, uso sin conexión, reembolsos y cómo hablar con una persona.</span></a></div>
+</section>
+<section data-lang="pt" lang="pt" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">Segue a sua voz. Se ouvir errado, o roteiro não pula mesmo assim.</p>
+<p>O reconhecimento acontece no seu aparelho. Sem conta, sem envio, funciona em modo avião.</p>
+<div class="cards"><a class="card" href="privacy.html"><b>Privacidade</b><span>O que o app faz com seu microfone, câmera e roteiros. Resposta curta: nada sai do aparelho.</span></a><a class="card" href="terms.html"><b>Termos</b><span>Compra única, um dia de teste, o que está incluído e os limites de um auxílio de leitura.</span></a><a class="card" href="support.html"><b>Suporte</b><span>Importar um roteiro, pedais Bluetooth, uso offline, reembolsos e como falar com uma pessoa.</span></a></div>
+</section>
+<section data-lang="fr" lang="fr" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">Il suit votre voix. S'il vous entend mal, le texte ne saute pas pour autant.</p>
+<p>La reconnaissance se fait sur votre appareil. Sans compte, sans envoi, fonctionne en mode avion.</p>
+<div class="cards"><a class="card" href="privacy.html"><b>Confidentialité</b><span>Ce que l'app fait de votre micro, de votre caméra et de vos textes. En bref : rien ne quitte l'appareil.</span></a><a class="card" href="terms.html"><b>Conditions</b><span>Achat unique, un jour d'essai, ce qui est inclus et les limites d'une aide à la lecture.</span></a><a class="card" href="support.html"><b>Assistance</b><span>Importer un texte, pédales Bluetooth, usage hors ligne, remboursements et comment joindre quelqu'un.</span></a></div>
+</section>
+<section data-lang="de" lang="de" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">Sie folgt deiner Stimme. Wenn sie dich falsch versteht, springt das Skript trotzdem nicht.</p>
+<p>Die Erkennung läuft auf deinem Gerät. Kein Konto, kein Upload, funktioniert im Flugmodus.</p>
+<div class="cards"><a class="card" href="privacy.html"><b>Datenschutz</b><span>Was die App mit Mikrofon, Kamera und Skripten macht. Kurz: nichts verlässt das Gerät.</span></a><a class="card" href="terms.html"><b>Bedingungen</b><span>Einmalkauf, ein Tag Test, was enthalten ist und die Grenzen einer Lesehilfe.</span></a><a class="card" href="support.html"><b>Hilfe</b><span>Skript importieren, Bluetooth-Pedale, Offline-Nutzung, Erstattungen und wie du einen Menschen erreichst.</span></a></div>
+</section>
+<section data-lang="ru" lang="ru" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">Следует за вашим голосом. Если ослышится, текст всё равно не прыгнет.</p>
+<p>Распознавание идёт на вашем устройстве. Без аккаунта, без загрузки, работает в авиарежиме.</p>
+<div class="cards"><a class="card" href="privacy.html"><b>Конфиденциальность</b><span>Что приложение делает с микрофоном, камерой и текстами. Коротко: ничего не покидает устройство.</span></a><a class="card" href="terms.html"><b>Условия</b><span>Разовая покупка, день на пробу, что входит и где границы помощника для чтения.</span></a><a class="card" href="support.html"><b>Поддержка</b><span>Импорт текста, Bluetooth-педали, работа офлайн, возвраты и как связаться с человеком.</span></a></div>
+</section>
+<section data-lang="it" lang="it" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">Segue la tua voce. Se ti sente male, il testo non salta comunque.</p>
+<p>Il riconoscimento avviene sul tuo dispositivo. Nessun account, nessun invio, funziona in modalità aereo.</p>
+<div class="cards"><a class="card" href="privacy.html"><b>Privacy</b><span>Che cosa fa l'app con microfono, fotocamera e testi. In breve: nulla esce dal dispositivo.</span></a><a class="card" href="terms.html"><b>Termini</b><span>Acquisto una tantum, un giorno di prova, cosa include e i limiti di un aiuto alla lettura.</span></a><a class="card" href="support.html"><b>Supporto</b><span>Importare un testo, pedali Bluetooth, uso offline, rimborsi e come parlare con una persona.</span></a></div>
+</section>
+<section data-lang="zh-Hans" lang="zh-Hans" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">它跟着你的声音走。听错了，稿子也不会乱跳。</p>
+<p>识别在你设备上完成。没有账号，不上传，飞行模式也能用。</p>
+<div class="cards"><a class="card" href="privacy.html"><b>隐私</b><span>App 怎么处理你的麦克风、相机和稿子。短答案：什么都不出设备。</span></a><a class="card" href="terms.html"><b>条款</b><span>一次性买断、一天试用、包含什么，以及读稿辅助工具的边界。</span></a><a class="card" href="support.html"><b>支持</b><span>导入稿子、蓝牙踏板、离线使用、退款，以及怎么找到真人。</span></a></div>
+</section>
+<section data-lang="zh-Hant" lang="zh-Hant" data-title="Puyan Teleprompter · 朴研提词器">
+<h1>Puyan Teleprompter</h1>
+<p class="sub">它跟著你的聲音走。聽錯了，稿子也不會亂跳。</p>
+<p>辨識在你裝置上完成。沒有帳號，不上傳，飛航模式也能用。</p>
+<div class="cards"><a class="card" href="privacy.html"><b>隱私</b><span>App 怎麼處理你的麥克風、相機和稿子。短答案：什麼都不出裝置。</span></a><a class="card" href="terms.html"><b>條款</b><span>一次性買斷、一天試用、包含什麼，以及讀稿輔助工具的邊界。</span></a><a class="card" href="support.html"><b>支援</b><span>匯入稿子、藍牙踏板、離線使用、退款，以及怎麼找到真人。</span></a></div>
+</section>
+</main>
+<footer>
+<p data-foot="preval">Translations are provided for convenience. The English version is the binding one.</p>
+<p>Puyan Teleprompter · 2026-11-15</p>
+</footer>
+<script>
+(function(){
+  var LANGS = ["en", "es", "pt", "fr", "de", "ru", "it", "zh-Hans", "zh-Hant"];
+  var NAVTEXT = {"privacy": {"en": "Privacy", "es": "Privacidad", "pt": "Privacidade", "fr": "Confidentialité", "de": "Datenschutz", "ru": "Конфиденциальность", "it": "Privacy", "zh-Hans": "隐私", "zh-Hant": "隱私"}, "terms": {"en": "Terms", "es": "Términos", "pt": "Termos", "fr": "Conditions", "de": "Bedingungen", "ru": "Условия", "it": "Termini", "zh-Hans": "条款", "zh-Hant": "條款"}, "support": {"en": "Support", "es": "Soporte", "pt": "Suporte", "fr": "Assistance", "de": "Hilfe", "ru": "Поддержка", "it": "Supporto", "zh-Hans": "支持", "zh-Hant": "支援"}, "idx": {"en": "Home", "es": "Inicio", "pt": "Início", "fr": "Accueil", "de": "Startseite", "ru": "Главная", "it": "Home", "zh-Hans": "首页", "zh-Hant": "首頁"}};
+  var PREVAIL = {"en": "Translations are provided for convenience. The English version is the binding one.", "es": "Las traducciones se ofrecen por comodidad. La versión en inglés es la vinculante.", "pt": "As traduções são fornecidas por conveniência. A versão em inglês é a vinculante.", "fr": "Les traductions sont fournies à titre indicatif. La version anglaise fait foi.", "de": "Übersetzungen dienen nur der Bequemlichkeit. Verbindlich ist die englische Fassung.", "ru": "Переводы предоставлены для удобства. Юридическую силу имеет английская версия.", "it": "Le traduzioni sono fornite per comodità. Fa fede la versione inglese.", "zh-Hans": "其他语言仅为方便阅读的译文，以英文版本为准。", "zh-Hant": "其他語言僅為方便閱讀的譯文，以英文版本為準。"};
+  var LANGSET = {};
+  LANGS.forEach(function(c){ LANGSET[c] = 1; });
+  var KEY = 'puyan.legal.lang';
+  function pick(){
+    var q = (location.search.match(/[?&]lang=([A-Za-z-]+)/) || [])[1];
+    if(q){
+      if(q === 'zh' || q === 'zh-CN' || q === 'zh-Hans') return 'zh-Hans';
+      if(q === 'zh-TW' || q === 'zh-HK' || q === 'zh-Hant') return 'zh-Hant';
+      if(LANGSET[q]) return q;
+    }
+    try{
+      var saved = localStorage.getItem(KEY);
+      if(saved && LANGSET[saved]) return saved;
+    }catch(e){}
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    if(/^zh/i.test(nav)){
+      return /TW|HK|MO|Hant/i.test(nav) ? 'zh-Hant' : 'zh-Hans';
+    }
+    var base = nav.split('-')[0].toLowerCase();
+    return LANGSET[base] ? base : 'en';
+  }
+  function apply(code){
+    document.documentElement.setAttribute('data-js', '1');
+    var secs = document.querySelectorAll('section[data-lang]');
+    for(var i=0;i<secs.length;i++){
+      secs[i].classList.toggle('cur', secs[i].getAttribute('data-lang') === code);
+    }
+    var sel = document.getElementById('lang');
+    if(sel) sel.value = code;
+    document.documentElement.lang = code;
+    /* 标题跟着语言走，否则分享出去的卡片永远是英文标题。
+       data-title 里存的是这一语的完整标题（含品牌名），不再自己拼。 */
+    var sec = document.querySelector('section[data-lang="' + code + '"]');
+    var dt = sec ? (sec.getAttribute('data-title') || '') : '';
+    if(dt) document.title = dt;
+
+    /* 顶栏导航和页脚也跟着换：中文界面里留一排 Privacy/Terms/Support
+       看起来像没做完，而且审核点的是这一排。 */
+    var navs = document.querySelectorAll('nav a[data-nav]');
+    for(var j=0;j<navs.length;j++){
+      var key = navs[j].getAttribute('data-nav');
+      if(NAVTEXT[key] && NAVTEXT[key][code]) navs[j].textContent = NAVTEXT[key][code];
+    }
+    var fprev = document.querySelector('[data-foot="preval"]');
+    if(fprev && PREVAIL[code]) fprev.textContent = PREVAIL[code];
+    try{ localStorage.setItem(KEY, code); }catch(e){}
+  }
+  var sel = document.getElementById('lang');
+  if(sel){
+    sel.addEventListener('change', function(){ apply(sel.value); });
+  }
+  apply(pick());
+})();
+</script>
+</body>
+</html>

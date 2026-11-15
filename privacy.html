@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Privacy Policy · Puyan Teleprompter</title>
+<style>
+:root{
+  --bg:#fbfbfd; --fg:#1d1d1f; --muted:#6e6e73; --line:#e3e3e8;
+  --card:#ffffff; --accent:#0a58d0; --chipbg:#f2f2f5;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f0f12; --fg:#f2f2f4; --muted:#9b9ba1; --line:#2a2a30;
+         --card:#17171b; --accent:#6fa8ff; --chipbg:#1e1e24; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+       "Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.bar{
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  padding:14px 20px; border-bottom:1px solid var(--line);
+  position:sticky; top:0; background:var(--bg); z-index:5;
+}
+.brand{font-weight:650; letter-spacing:-.01em; color:var(--fg); font-size:16px}
+.brand:hover{text-decoration:none}
+.bar .sp{flex:1}
+select{
+  font:inherit; font-size:14px; color:var(--fg); background:var(--chipbg);
+  border:1px solid var(--line); border-radius:9px; padding:7px 10px;
+}
+nav{display:flex; gap:6px; padding:10px 20px 0; flex-wrap:wrap}
+nav a{
+  font-size:14px; color:var(--muted); padding:6px 12px; border-radius:999px;
+}
+nav a.on{background:var(--chipbg); color:var(--fg); font-weight:600}
+nav a:hover{text-decoration:none; color:var(--fg)}
+main{max-width:720px; margin:0 auto; padding:22px 20px 8px}
+h1{font-size:30px; line-height:1.24; letter-spacing:-.02em; margin:18px 0 6px}
+h2{font-size:17px; line-height:1.4; margin:30px 0 8px; letter-spacing:-.01em}
+p{margin:0 0 11px; color:var(--fg)}
+.sub{color:var(--muted); font-size:14px; margin-bottom:26px}
+.who{color:var(--muted); font-size:14px; margin:0 0 2px}
+footer{
+  max-width:720px; margin:0 auto; padding:26px 20px 60px;
+  border-top:1px solid var(--line); color:var(--muted); font-size:13px;
+}
+footer p{margin:0 0 6px; color:var(--muted)}
+.cards{display:grid; gap:12px; margin:28px 0 10px}
+.card{
+  display:block; background:var(--card); border:1px solid var(--line);
+  border-radius:14px; padding:16px 18px; color:var(--fg);
+}
+.card:hover{text-decoration:none; border-color:var(--accent)}
+.card b{display:block; font-size:16px; margin-bottom:2px}
+.card span{color:var(--muted); font-size:14px}
+section[data-lang]{display:none}
+section[data-lang].cur{display:block}
+/* ⛔ 没有 JS 时（脚本被拦、审核爬虫、老浏览器）必须还有一页可读的东西。
+   只写 section[data-lang]{display:none} 会让整页白屏 —— 审核点进来是空的，
+   直接判「隐私政策页打不开」。所以默认放英文出来，JS 一跑就交给 .cur 管。 */
+html:not([data-js]) section[data-lang="en"]{display:block}
+@media (max-width:520px){
+  h1{font-size:25px}
+  main{padding:18px 16px 4px}
+  .bar{padding:12px 16px}
+  nav{padding:8px 16px 0}
+  footer{padding:22px 16px 50px}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a class="brand" href="index.html">Puyan Teleprompter</a>
+  <div class="sp"></div>
+  <select id="lang" aria-label="Language">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="pt">Português</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="it">Italiano</option>
+      <option value="zh-Hans">简体中文</option>
+      <option value="zh-Hant">繁體中文</option>
+  </select>
+</div>
+<nav>
+  <a href="privacy.html" class="on" data-nav="privacy">Privacy</a>
+  <a href="terms.html" data-nav="terms">Terms</a>
+  <a href="support.html" data-nav="support">Support</a>
+  <a href="index.html" data-nav="idx">Home</a>
+</nav>
+<main>
+<section data-lang="en" lang="en" data-title="Privacy Policy · Puyan Teleprompter">
+<h1>Privacy Policy</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>The short version</h2>
+<p>Everything happens on your iPhone or iPad. There is no account, no server of ours, and nothing is uploaded.</p>
+<p>If you delete the app, everything it stored goes with it.</p>
+<h2>Microphone</h2>
+<p>The microphone is opened only while voice following is on. You start it, you stop it.</p>
+<p>Audio is decoded in memory on the device to work out which word you are on. It is not written to a file and it does not leave the device.</p>
+<h2>Camera and recordings</h2>
+<p>The camera is opened only when you start a recording.</p>
+<p>Recordings are saved to your own photo library. We never receive a copy.</p>
+<h2>Your scripts and settings</h2>
+<p>Scripts, settings and reading positions are stored inside the app on your device.</p>
+<p>There is no cloud copy, so there is nothing for us to hand over, sell, or lose.</p>
+<h2>Purchases</h2>
+<p>Payment is handled entirely by Apple. We are told only whether a purchase is active — never your name, card, or address.</p>
+<h2>No tracking</h2>
+<p>There is no analytics SDK, no advertising SDK and no crash reporter in the app.</p>
+<p>We do not build a profile of you and we do not follow you across other apps or websites.</p>
+<h2>Children, your rights, and changes</h2>
+<p>The app is not directed at children under 13.</p>
+<p>Because we hold no data about you, there is nothing on our side to export or delete. Uninstalling the app is the complete deletion.</p>
+<p>If this policy changes, the date at the foot of this page changes with it.</p>
+<h2>Contact</h2>
+<p>Questions about privacy: ew314ew@gmail.com</p>
+</section>
+<section data-lang="es" lang="es" data-title="Política de privacidad · Puyan Teleprompter">
+<h1>Política de privacidad</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>En resumen</h2>
+<p>Todo ocurre en tu iPhone o iPad. No hay cuenta, no hay servidor nuestro y no se sube nada.</p>
+<p>Si borras la app, se borra todo lo que guardaba.</p>
+<h2>Micrófono</h2>
+<p>El micrófono solo se abre mientras la lectura por voz está activa. Tú lo enciendes y tú lo apagas.</p>
+<p>El audio se descodifica en memoria, en el dispositivo, para saber en qué palabra vas. No se escribe en ningún archivo ni sale del dispositivo.</p>
+<h2>Cámara y grabaciones</h2>
+<p>La cámara solo se abre cuando empiezas a grabar.</p>
+<p>Las grabaciones se guardan en tu propia fototeca. Nunca recibimos una copia.</p>
+<h2>Tus guiones y ajustes</h2>
+<p>Los guiones, los ajustes y la posición de lectura se guardan dentro de la app, en tu dispositivo.</p>
+<p>No hay copia en la nube, así que no hay nada que podamos entregar, vender o perder.</p>
+<h2>Compras</h2>
+<p>El pago lo gestiona Apple por completo. Solo se nos indica si la compra está activa; nunca tu nombre, tarjeta ni dirección.</p>
+<h2>Sin seguimiento</h2>
+<p>La app no incluye SDK de analítica, ni de publicidad, ni de informes de fallos.</p>
+<p>No creamos un perfil tuyo ni te seguimos por otras apps o sitios web.</p>
+<h2>Menores, tus derechos y cambios</h2>
+<p>La app no está dirigida a menores de 13 años.</p>
+<p>Como no guardamos datos tuyos, no hay nada que exportar ni eliminar por nuestra parte: desinstalar la app es el borrado completo.</p>
+<p>Si esta política cambia, cambiará también la fecha al pie de esta página.</p>
+<h2>Contacto</h2>
+<p>Dudas sobre privacidad: ew314ew@gmail.com</p>
+</section>
+<section data-lang="pt" lang="pt" data-title="Política de privacidade · Puyan Teleprompter">
+<h1>Política de privacidade</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>Resumindo</h2>
+<p>Tudo acontece no seu iPhone ou iPad. Não há conta, não há servidor nosso e nada é enviado.</p>
+<p>Se você apagar o app, tudo o que ele guardava vai junto.</p>
+<h2>Microfone</h2>
+<p>O microfone só é aberto enquanto a leitura por voz está ligada. Você liga e você desliga.</p>
+<p>O áudio é decodificado na memória, no aparelho, para saber em que palavra você está. Não é gravado em arquivo nem sai do aparelho.</p>
+<h2>Câmera e gravações</h2>
+<p>A câmera só é aberta quando você começa a gravar.</p>
+<p>As gravações são salvas na sua própria galeria. Nunca recebemos uma cópia.</p>
+<h2>Seus roteiros e ajustes</h2>
+<p>Roteiros, ajustes e a posição de leitura ficam dentro do app, no seu aparelho.</p>
+<p>Não existe cópia na nuvem, então não há nada que possamos entregar, vender ou perder.</p>
+<h2>Compras</h2>
+<p>O pagamento é feito inteiramente pela Apple. Só sabemos se a compra está ativa — nunca seu nome, cartão ou endereço.</p>
+<h2>Sem rastreamento</h2>
+<p>O app não tem SDK de análise, nem de publicidade, nem de relatório de falhas.</p>
+<p>Não montamos um perfil seu e não rastreamos você em outros apps ou sites.</p>
+<h2>Crianças, seus direitos e mudanças</h2>
+<p>O app não é destinado a menores de 13 anos.</p>
+<p>Como não guardamos dados seus, não há nada para exportar ou excluir do nosso lado: desinstalar o app é a exclusão completa.</p>
+<p>Se esta política mudar, a data no rodapé desta página muda junto.</p>
+<h2>Contato</h2>
+<p>Dúvidas sobre privacidade: ew314ew@gmail.com</p>
+</section>
+<section data-lang="fr" lang="fr" data-title="Politique de confidentialité · Puyan Teleprompter">
+<h1>Politique de confidentialité</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>En bref</h2>
+<p>Tout se passe sur votre iPhone ou iPad. Pas de compte, pas de serveur chez nous, rien n'est envoyé.</p>
+<p>Si vous supprimez l'app, tout ce qu'elle contenait disparaît avec elle.</p>
+<h2>Microphone</h2>
+<p>Le micro ne s'ouvre que pendant le suivi vocal. C'est vous qui l'activez et vous qui l'arrêtez.</p>
+<p>L'audio est décodé en mémoire, sur l'appareil, pour savoir où vous en êtes. Il n'est écrit dans aucun fichier et ne quitte pas l'appareil.</p>
+<h2>Caméra et enregistrements</h2>
+<p>La caméra ne s'ouvre que lorsque vous lancez un enregistrement.</p>
+<p>Les enregistrements sont enregistrés dans votre propre photothèque. Nous n'en recevons jamais de copie.</p>
+<h2>Vos textes et réglages</h2>
+<p>Les textes, les réglages et la position de lecture sont stockés dans l'app, sur votre appareil.</p>
+<p>Il n'y a pas de copie dans le cloud : nous n'avons donc rien à remettre, à vendre ni à perdre.</p>
+<h2>Achats</h2>
+<p>Le paiement est entièrement géré par Apple. Nous savons seulement si l'achat est actif — jamais votre nom, votre carte ou votre adresse.</p>
+<h2>Aucun pistage</h2>
+<p>L'app ne contient ni SDK d'analyse, ni SDK publicitaire, ni rapport de plantage.</p>
+<p>Nous ne construisons pas de profil vous concernant et ne vous suivons pas dans d'autres apps ou sites.</p>
+<h2>Enfants, vos droits et modifications</h2>
+<p>L'app ne s'adresse pas aux enfants de moins de 13 ans.</p>
+<p>Comme nous ne détenons aucune donnée vous concernant, il n'y a rien à exporter ni à supprimer de notre côté : désinstaller l'app est la suppression complète.</p>
+<p>Si cette politique change, la date en bas de page changera avec elle.</p>
+<h2>Contact</h2>
+<p>Questions sur la confidentialité : ew314ew@gmail.com</p>
+</section>
+<section data-lang="de" lang="de" data-title="Datenschutzerklärung · Puyan Teleprompter">
+<h1>Datenschutzerklärung</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>Kurz gesagt</h2>
+<p>Alles passiert auf deinem iPhone oder iPad. Es gibt kein Konto, keinen Server von uns, und nichts wird hochgeladen.</p>
+<p>Wenn du die App löschst, verschwindet alles, was sie gespeichert hat, mit ihr.</p>
+<h2>Mikrofon</h2>
+<p>Das Mikrofon wird nur geöffnet, solange die Sprachführung läuft. Du schaltest sie ein, du schaltest sie aus.</p>
+<p>Audio wird im Arbeitsspeicher auf dem Gerät ausgewertet, um zu erkennen, an welchem Wort du bist. Es wird nicht in eine Datei geschrieben und verlässt das Gerät nicht.</p>
+<h2>Kamera und Aufnahmen</h2>
+<p>Die Kamera wird nur geöffnet, wenn du eine Aufnahme startest.</p>
+<p>Aufnahmen werden in deiner eigenen Fotomediathek gespeichert. Wir erhalten keine Kopie.</p>
+<h2>Deine Skripte und Einstellungen</h2>
+<p>Skripte, Einstellungen und Lesepositionen liegen in der App auf deinem Gerät.</p>
+<p>Es gibt keine Cloud-Kopie — es gibt also nichts, was wir herausgeben, verkaufen oder verlieren könnten.</p>
+<h2>Käufe</h2>
+<p>Die Zahlung wickelt allein Apple ab. Wir erfahren nur, ob ein Kauf aktiv ist — niemals deinen Namen, deine Karte oder deine Adresse.</p>
+<h2>Kein Tracking</h2>
+<p>Die App enthält kein Analyse-SDK, kein Werbe-SDK und keinen Absturzbericht.</p>
+<p>Wir erstellen kein Profil von dir und verfolgen dich nicht in anderen Apps oder Websites.</p>
+<h2>Kinder, deine Rechte und Änderungen</h2>
+<p>Die App richtet sich nicht an Kinder unter 13 Jahren.</p>
+<p>Da wir keine Daten über dich besitzen, gibt es bei uns nichts zu exportieren oder zu löschen — die App zu deinstallieren ist die vollständige Löschung.</p>
+<p>Ändert sich diese Erklärung, ändert sich auch das Datum unten auf dieser Seite.</p>
+<h2>Kontakt</h2>
+<p>Fragen zum Datenschutz: ew314ew@gmail.com</p>
+</section>
+<section data-lang="ru" lang="ru" data-title="Политика конфиденциальности · Puyan Teleprompter">
+<h1>Политика конфиденциальности</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>Коротко</h2>
+<p>Всё происходит на вашем iPhone или iPad. Нет учётной записи, нет нашего сервера, ничего не загружается.</p>
+<p>Если удалить приложение, всё, что оно хранило, удалится вместе с ним.</p>
+<h2>Микрофон</h2>
+<p>Микрофон открывается только пока включено голосовое сопровождение. Вы включаете — вы и выключаете.</p>
+<p>Звук обрабатывается в памяти на устройстве, чтобы определить, на каком вы слове. Он не записывается в файл и не покидает устройство.</p>
+<h2>Камера и записи</h2>
+<p>Камера открывается только когда вы начинаете запись.</p>
+<p>Записи сохраняются в вашу собственную медиатеку. Копию мы не получаем.</p>
+<h2>Ваши тексты и настройки</h2>
+<p>Тексты, настройки и позиция чтения хранятся в приложении на вашем устройстве.</p>
+<p>Облачной копии нет, поэтому нам нечего передавать, продавать или терять.</p>
+<h2>Покупки</h2>
+<p>Оплату полностью обрабатывает Apple. Мы узнаём только, активна ли покупка — никогда ваше имя, карту или адрес.</p>
+<h2>Без слежки</h2>
+<p>В приложении нет SDK аналитики, рекламы и отчётов о сбоях.</p>
+<p>Мы не составляем ваш профиль и не отслеживаем вас в других приложениях и на сайтах.</p>
+<h2>Дети, ваши права и изменения</h2>
+<p>Приложение не предназначено для детей младше 13 лет.</p>
+<p>Поскольку мы не храним ваши данные, с нашей стороны нечего выгружать или удалять: удаление приложения — это полное удаление.</p>
+<p>Если политика изменится, дата внизу страницы изменится вместе с ней.</p>
+<h2>Связаться</h2>
+<p>Вопросы о конфиденциальности: ew314ew@gmail.com</p>
+</section>
+<section data-lang="it" lang="it" data-title="Informativa sulla privacy · Puyan Teleprompter">
+<h1>Informativa sulla privacy</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>In breve</h2>
+<p>Tutto avviene sul tuo iPhone o iPad. Non c'è un account, non c'è un nostro server e nulla viene caricato.</p>
+<p>Se elimini l'app, tutto ciò che ha memorizzato sparisce con lei.</p>
+<h2>Microfono</h2>
+<p>Il microfono si apre solo mentre il seguito vocale è attivo. Lo accendi tu, lo spegni tu.</p>
+<p>L'audio viene decodificato in memoria, sul dispositivo, per capire a che parola sei. Non viene scritto su file e non lascia il dispositivo.</p>
+<h2>Fotocamera e registrazioni</h2>
+<p>La fotocamera si apre solo quando avvii una registrazione.</p>
+<p>Le registrazioni vengono salvate nella tua libreria foto. Non ne riceviamo mai una copia.</p>
+<h2>I tuoi testi e le impostazioni</h2>
+<p>Testi, impostazioni e posizione di lettura sono salvati nell'app, sul tuo dispositivo.</p>
+<p>Non esiste una copia nel cloud: non abbiamo nulla da consegnare, vendere o perdere.</p>
+<h2>Acquisti</h2>
+<p>Il pagamento è gestito interamente da Apple. Sappiamo solo se l'acquisto è attivo — mai il tuo nome, la carta o l'indirizzo.</p>
+<h2>Nessun tracciamento</h2>
+<p>L'app non contiene SDK di analisi, né pubblicitari, né report di crash.</p>
+<p>Non costruiamo un tuo profilo e non ti seguiamo in altre app o siti.</p>
+<h2>Minori, i tuoi diritti e modifiche</h2>
+<p>L'app non è destinata a minori di 13 anni.</p>
+<p>Poiché non conserviamo dati che ti riguardano, non c'è nulla da esportare o cancellare da parte nostra: disinstallare l'app è la cancellazione completa.</p>
+<p>Se questa informativa cambia, cambia anche la data in fondo alla pagina.</p>
+<h2>Contatti</h2>
+<p>Domande sulla privacy: ew314ew@gmail.com</p>
+</section>
+<section data-lang="zh-Hans" lang="zh-Hans" data-title="隐私政策 · Puyan Teleprompter">
+<h1>隐私政策</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>一句话</h2>
+<p>所有处理都在你的 iPhone 或 iPad 上完成。没有账号，没有我们的服务器，什么都不上传。</p>
+<p>你删掉 App，它存过的东西跟着一起没了。</p>
+<h2>麦克风</h2>
+<p>只有开跟读时才开麦克风。你开，你关。</p>
+<p>音频只在本机内存里解码，用来判断你念到哪个字。不写文件，不出设备。</p>
+<h2>相机与录制</h2>
+<p>只有你开始录制时才开相机。</p>
+<p>录好的视频存进你自己的相册，我们拿不到副本。</p>
+<h2>你的稿子与设置</h2>
+<p>稿子、设置、念到的位置都存在你设备上的 App 里。</p>
+<p>没有云端副本，所以我们既没有东西可交出去，也没有东西可卖、可丢。</p>
+<h2>购买</h2>
+<p>付款全部由 Apple 处理。我们只知道「这笔购买是否有效」，看不到你的姓名、卡号、地址。</p>
+<h2>不做追踪</h2>
+<p>App 里没有统计 SDK、没有广告 SDK、没有崩溃上报。</p>
+<p>我们不给你建档，也不跨其他 App 或网站追踪你。</p>
+<h2>儿童、你的权利、政策变更</h2>
+<p>本 App 不面向 13 岁以下儿童。</p>
+<p>因为我们不持有你的任何数据，所以没有东西可供导出或删除 —— 卸载 App 就是彻底删除。</p>
+<p>政策若有变化，本页底部的日期会跟着改。</p>
+<h2>联系</h2>
+<p>隐私相关问题：ew314ew@gmail.com</p>
+</section>
+<section data-lang="zh-Hant" lang="zh-Hant" data-title="隱私政策 · Puyan Teleprompter">
+<h1>隱私政策</h1>
+<p class="who">Puyan Teleprompter · 2026-11-15</p>
+<h2>一句話</h2>
+<p>所有處理都在你的 iPhone 或 iPad 上完成。沒有帳號，沒有我們的伺服器，什麼都不上傳。</p>
+<p>你刪掉 App，它存過的東西也跟著一起沒了。</p>
+<h2>麥克風</h2>
+<p>只有開跟讀時才開麥克風。你開，你關。</p>
+<p>音訊只在本機記憶體裡解碼，用來判斷你唸到哪個字。不寫檔案，不出裝置。</p>
+<h2>相機與錄製</h2>
+<p>只有你開始錄製時才開相機。</p>
+<p>錄好的影片存進你自己的相簿，我們拿不到副本。</p>
+<h2>你的稿子與設定</h2>
+<p>稿子、設定、唸到的位置都存在你裝置上的 App 裡。</p>
+<p>沒有雲端副本，所以我們既沒有東西可交出去，也沒有東西可賣、可丟。</p>
+<h2>購買</h2>
+<p>付款全部由 Apple 處理。我們只知道「這筆購買是否有效」，看不到你的姓名、卡號、地址。</p>
+<h2>不做追蹤</h2>
+<p>App 裡沒有統計 SDK、沒有廣告 SDK、沒有當機回報。</p>
+<p>我們不替你建檔，也不跨其他 App 或網站追蹤你。</p>
+<h2>兒童、你的權利、政策變更</h2>
+<p>本 App 不面向 13 歲以下兒童。</p>
+<p>因為我們不持有你的任何資料，所以沒有東西可供匯出或刪除 —— 卸載 App 就是徹底刪除。</p>
+<p>政策若有變化，本頁底部的日期會跟著改。</p>
+<h2>聯絡</h2>
+<p>隱私相關問題：ew314ew@gmail.com</p>
+</section>
+</main>
+<footer>
+<p data-foot="preval">Translations are provided for convenience. The English version is the binding one.</p>
+<p>Puyan Teleprompter · 2026-11-15</p>
+</footer>
+<script>
+(function(){
+  var LANGS = ["en", "es", "pt", "fr", "de", "ru", "it", "zh-Hans", "zh-Hant"];
+  var NAVTEXT = {"privacy": {"en": "Privacy", "es": "Privacidad", "pt": "Privacidade", "fr": "Confidentialité", "de": "Datenschutz", "ru": "Конфиденциальность", "it": "Privacy", "zh-Hans": "隐私", "zh-Hant": "隱私"}, "terms": {"en": "Terms", "es": "Términos", "pt": "Termos", "fr": "Conditions", "de": "Bedingungen", "ru": "Условия", "it": "Termini", "zh-Hans": "条款", "zh-Hant": "條款"}, "support": {"en": "Support", "es": "Soporte", "pt": "Suporte", "fr": "Assistance", "de": "Hilfe", "ru": "Поддержка", "it": "Supporto", "zh-Hans": "支持", "zh-Hant": "支援"}, "idx": {"en": "Home", "es": "Inicio", "pt": "Início", "fr": "Accueil", "de": "Startseite", "ru": "Главная", "it": "Home", "zh-Hans": "首页", "zh-Hant": "首頁"}};
+  var PREVAIL = {"en": "Translations are provided for convenience. The English version is the binding one.", "es": "Las traducciones se ofrecen por comodidad. La versión en inglés es la vinculante.", "pt": "As traduções são fornecidas por conveniência. A versão em inglês é a vinculante.", "fr": "Les traductions sont fournies à titre indicatif. La version anglaise fait foi.", "de": "Übersetzungen dienen nur der Bequemlichkeit. Verbindlich ist die englische Fassung.", "ru": "Переводы предоставлены для удобства. Юридическую силу имеет английская версия.", "it": "Le traduzioni sono fornite per comodità. Fa fede la versione inglese.", "zh-Hans": "其他语言仅为方便阅读的译文，以英文版本为准。", "zh-Hant": "其他語言僅為方便閱讀的譯文，以英文版本為準。"};
+  var LANGSET = {};
+  LANGS.forEach(function(c){ LANGSET[c] = 1; });
+  var KEY = 'puyan.legal.lang';
+  function pick(){
+    var q = (location.search.match(/[?&]lang=([A-Za-z-]+)/) || [])[1];
+    if(q){
+      if(q === 'zh' || q === 'zh-CN' || q === 'zh-Hans') return 'zh-Hans';
+      if(q === 'zh-TW' || q === 'zh-HK' || q === 'zh-Hant') return 'zh-Hant';
+      if(LANGSET[q]) return q;
+    }
+    try{
+      var saved = localStorage.getItem(KEY);
+      if(saved && LANGSET[saved]) return saved;
+    }catch(e){}
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    if(/^zh/i.test(nav)){
+      return /TW|HK|MO|Hant/i.test(nav) ? 'zh-Hant' : 'zh-Hans';
+    }
+    var base = nav.split('-')[0].toLowerCase();
+    return LANGSET[base] ? base : 'en';
+  }
+  function apply(code){
+    document.documentElement.setAttribute('data-js', '1');
+    var secs = document.querySelectorAll('section[data-lang]');
+    for(var i=0;i<secs.length;i++){
+      secs[i].classList.toggle('cur', secs[i].getAttribute('data-lang') === code);
+    }
+    var sel = document.getElementById('lang');
+    if(sel) sel.value = code;
+    document.documentElement.lang = code;
+    /* 标题跟着语言走，否则分享出去的卡片永远是英文标题。
+       data-title 里存的是这一语的完整标题（含品牌名），不再自己拼。 */
+    var sec = document.querySelector('section[data-lang="' + code + '"]');
+    var dt = sec ? (sec.getAttribute('data-title') || '') : '';
+    if(dt) document.title = dt;
+
+    /* 顶栏导航和页脚也跟着换：中文界面里留一排 Privacy/Terms/Support
+       看起来像没做完，而且审核点的是这一排。 */
+    var navs = document.querySelectorAll('nav a[data-nav]');
+    for(var j=0;j<navs.length;j++){
+      var key = navs[j].getAttribute('data-nav');
+      if(NAVTEXT[key] && NAVTEXT[key][code]) navs[j].textContent = NAVTEXT[key][code];
+    }
+    var fprev = document.querySelector('[data-foot="preval"]');
+    if(fprev && PREVAIL[code]) fprev.textContent = PREVAIL[code];
+    try{ localStorage.setItem(KEY, code); }catch(e){}
+  }
+  var sel = document.getElementById('lang');
+  if(sel){
+    sel.addEventListener('change', function(){ apply(sel.value); });
+  }
+  apply(pick());
+})();
+</script>
+</body>
+</html>
