@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>隐私政策（Android 版）· 朴研提词器</title>
+<meta name="description" content="朴研提词器 Android 版的隐私政策：完全在本机运行，不设账号、不上传稿件与音视频，不接入广告与统计 SDK。">
+<style>
+  :root{
+    --ink:#1b1c1a; --ink-2:#4a4d47; --ink-3:#7b7f76;
+    --paper:#faf9f5; --card:#ffffff; --line:#e3e1d9;
+    --brand:#2e6b5e; --brand-soft:#eaf2ef;
+    --warn-bg:#fdf6e7; --warn-line:#e8d9b0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#eceee9; --ink-2:#b9bdb4; --ink-3:#8b9086;
+      --paper:#141615; --card:#1b1e1c; --line:#2f342f;
+      --brand:#7fc4b1; --brand-soft:#1f2b28;
+      --warn-bg:#2a2418; --warn-line:#4a3f26;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font:16px/1.78 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+    padding:0 20px 72px;
+  }
+  .wrap{max-width:760px;margin:0 auto}
+  header{padding:44px 0 26px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:13px;letter-spacing:.14em;color:var(--brand);font-weight:600;text-transform:uppercase;margin:0 0 10px}
+  h1{font-size:30px;line-height:1.3;margin:0 0 14px;letter-spacing:-.01em;font-weight:700}
+  .meta{font-size:13.5px;color:var(--ink-3);margin:0}
+  .meta span{margin-right:18px;white-space:nowrap}
+  .lede{
+    margin:26px 0 0;padding:20px 22px;background:var(--card);border:1px solid var(--line);
+    border-left:3px solid var(--brand);border-radius:4px;
+  }
+  .lede p{margin:0;font-size:16.5px}
+  .lede strong{color:var(--brand)}
+  h2{font-size:20px;margin:46px 0 14px;padding-top:6px;font-weight:700;letter-spacing:-.005em}
+  h2 .n{color:var(--brand);font-variant-numeric:tabular-nums;margin-right:10px;font-weight:600}
+  h3{font-size:16px;margin:26px 0 8px;font-weight:650}
+  p{margin:0 0 14px;color:var(--ink-2)}
+  ul,ol{margin:0 0 16px;padding-left:22px}
+  li{margin:0 0 8px;color:var(--ink-2)}
+  strong{color:var(--ink);font-weight:650}
+  a{color:var(--brand);text-decoration:none;border-bottom:1px solid rgba(46,107,94,.35)}
+  a:hover{border-bottom-color:var(--brand)}
+  table{width:100%;border-collapse:collapse;margin:6px 0 20px;font-size:14.5px;background:var(--card)}
+  th,td{text-align:left;padding:11px 13px;border:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+  th{background:var(--brand-soft);color:var(--ink);font-weight:650;white-space:nowrap}
+  code{
+    font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    background:var(--brand-soft);color:var(--ink);padding:1px 5px;border-radius:3px;
+  }
+  .note{
+    margin:20px 0;padding:16px 18px;background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:4px;
+  }
+  .note p{margin:0;font-size:14.5px;color:var(--ink-2)}
+  .note strong{color:var(--ink)}
+  .grid{display:grid;gap:10px;margin:0 0 18px}
+  @media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+  .cell{padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:4px}
+  .cell b{display:block;font-size:14.5px;margin-bottom:3px;color:var(--ink)}
+  .cell span{font-size:13.5px;color:var(--ink-3);line-height:1.6}
+  footer{
+    margin-top:56px;padding-top:22px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--ink-3);line-height:1.9;
+  }
+  footer .row{margin:0 0 4px}
+  footer a{border-bottom:none}
+  .top{font-size:13px;color:var(--ink-3);display:block;margin:0 0 18px}
+  .top a{border-bottom:none}
+  @media(max-width:520px){
+    body{padding:0 16px 56px;font-size:15.5px}
+    h1{font-size:25px}
+    h2{font-size:18.5px;margin-top:38px}
+    header{padding-top:32px}
+    th,td{padding:9px 10px}
+    table{font-size:13.5px}
+  }
+  @media print{
+    body{background:#fff;padding:0}
+    h2{page-break-after:avoid}
+    .lede,.cell,table{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Privacy Policy · Android</p>
+  <h1>朴研提词器 · 隐私政策（Android 版）</h1>
+  <p class="meta">
+    <span>版本 V1.3</span>
+    <span>生效日期：2026 年 11 月 28 日</span>
+    <span>适用：Android 版 1.0.0</span>
+  </p>
+</header>
+
+<div class="lede">
+  <p><strong>一句话说完：</strong>朴研提词器是一款<strong>完全在本机运行的单机软件</strong>。
+  它没有账号系统，没有我们自建的服务器，不会把你的稿件、录音或画面传到任何地方。
+  我们<strong>不收集、不出售、不共享</strong>你的个人信息。</p>
+</div>
+
+<p style="margin-top:26px">下面是完整说明。即使你只看上面那一段，也已经掌握了全部实质内容；
+后续章节是为了逐项交代清楚每一条权限、每一份数据到底发生了什么，以便应用商店与用户核对。</p>
+
+<h2><span class="n">1</span>我们是谁</h2>
+
+<p>本应用的开发者、同时也是本政策项下的个人信息处理者：</p>
+
+<table>
+  <tr><th>开发者</th><td>荣誉（个人开发者）</td></tr>
+  <tr><th>开发者身份</th><td>自然人，以个人开发者身份在应用市场发行</td></tr>
+  <tr><th>应用内购买的商户主体</th><td>咸阳市秦都区朴研软件开发工作室（个体工商户，经营者：荣誉；统一社会信用代码 <code>92610402MAKMXGYF6X</code>）</td></tr>
+  <tr><th>联系邮箱</th><td><a href="mailto:rongyu_314@qq.com">rongyu_314@qq.com</a></td></tr>
+</table>
+
+<p>本政策适用于 Android 版本的「朴研提词器」应用（包名 <code>com.ew314.puyan</code>）。
+iOS 版本由另一份独立政策覆盖，两者互不适用。</p>
+
+<h2><span class="n">2</span>我们不收集什么</h2>
+
+<p>先把边界划清。以下这些，我们<strong>完全没有做</strong>：</p>
+
+<div class="grid">
+  <div class="cell"><b>没有账号</b><span>不需要手机号、邮箱、微信或任何登录方式，也没有“注册”“注销”这类环节。</span></div>
+  <div class="cell"><b>没有服务器</b><span>我们没有为本应用架设任何后端服务，应用内不存在指向我们服务器的网络请求。</span></div>
+  <div class="cell"><b>不上传稿件</b><span>你导入或输入的稿件只留在你的设备上，我们不读取、不备份、不同步。</span></div>
+  <div class="cell"><b>不上传音视频</b><span>麦克风与摄像头的数据在本机内存中处理，处理完即释放。</span></div>
+  <div class="cell"><b>没有广告 SDK</b><span>不接入任何广告平台，不做定向推送，不生成用户画像。</span></div>
+  <div class="cell"><b>没有统计 SDK</b><span>不接入第三方数据统计、崩溃上报、行为分析类组件。</span></div>
+</div>
+
+<p>因此我们<strong>不会</strong>收集：你的姓名、手机号、身份证件、通讯录、短信、精确地理位置、
+设备唯一标识符（IMEI / IMSI / OAID / Android ID）、已安装应用列表、通讯记录、
+相册内容或任何生物识别信息。</p>
+
+<p>关于<strong>剪贴板</strong>：只有在你自己点击「粘贴」导入稿件的那一刻，应用才读取一次剪贴板文本，
+读到的内容直接成为稿件正文，不记录来源、不外发。应用不会在后台监听剪贴板变化。</p>
+
+<h2><span class="n">3</span>需要申请的权限，以及为什么</h2>
+
+<p>应用在系统里声明的权限只有下面三项，<strong>没有任何一项在启动时批量索取</strong>——
+全部在你主动使用对应功能时才弹出申请，拒绝授权不影响其他功能。</p>
+
+<table>
+  <tr>
+    <th>权限</th><th>什么时候申请</th><th>用来做什么</th><th>数据去哪</th>
+  </tr>
+  <tr>
+    <td><strong>麦克风</strong><br><code>RECORD_AUDIO</code></td>
+    <td>你第一次打开「语音跟读」时</td>
+    <td>听你念稿，判断你念到了哪一句，让稿件自动滚动到对应位置。这是跟读功能的唯一输入源。</td>
+    <td><strong>不离开本机。</strong>语音识别模型随安装包一起安装在本机，识别过程完全离线运行。音频流只在内存中短暂存在，不写入文件、不上传、不保留。</td>
+  </tr>
+  <tr>
+    <td><strong>相机</strong><br><code>CAMERA</code></td>
+    <td>你第一次打开「画面背景」或点击录制时</td>
+    <td>① 把实时画面作为稿件背后的背景，人物出镜时视线更自然；② 拍摄纸质文稿，在设备上识别成文字后导入。</td>
+    <td><strong>不离开本机。</strong>画面只在本机渲染与识别，不自动录制、不上传、不保存。</td>
+  </tr>
+  <tr>
+    <td><strong>网络</strong><br><code>INTERNET</code></td>
+    <td>不弹窗（普通权限）</td>
+    <td>仅用于应用内购买时与应用商店通信。提词、跟读、录像全部离线可用。</td>
+    <td>只与应用商店交互，不与我们交互——我们没有可交互的服务器。</td>
+  </tr>
+</table>
+
+<div class="note">
+  <p><strong>我们刻意没有申请的权限：</strong>存储 / 相册读写、位置、通讯录、短信、通话记录、
+  通知、后台自启、读取已安装应用列表。<strong>导入稿件走系统文件选择器</strong>（你选哪个文件就读哪个，
+  应用本身无权遍历存储）；<strong>录制完成的视频不自动写进相册</strong>，只在点「保存 / 分享」时
+  写入应用缓存目录，再交给系统分享面板，由你自己决定存到哪里。</p>
+</div>
+
+<div class="note">
+  <p><strong>关于本地语音识别的说明。</strong>跟读依赖的识别模型（基于开源 sherpa-onnx 与
+  Zipformer 结构，中文与英文两套，合计约 110 MB）随安装包一起下发，运行在你手机本地。
+  因此本应用在<strong>飞行模式下也能完成跟读</strong>——这既是功能特性，也是隐私保证：
+  如果音频真的上了云，飞行模式下就不可能工作。</p>
+</div>
+
+<h2><span class="n">4</span>你的数据到底存在哪里</h2>
+
+<table>
+  <tr><th>内容</th><th>存放位置</th><th>保存期限</th></tr>
+  <tr>
+    <td>稿件文本、标题、分组</td>
+    <td>应用私有目录（其他应用无法访问），不上传到任何服务器</td>
+    <td>直到你在应用内删除，或卸载应用</td>
+  </tr>
+  <tr>
+    <td>显示偏好、字号、滚动速度、主题、语言选择</td>
+    <td>同上（本机配置）</td>
+    <td>同上</td>
+  </tr>
+  <tr>
+    <td>生成的视频文件</td>
+    <td>应用缓存目录中的临时文件，通过系统分享面板交给你指定的应用（相册、微信、文件管理器等）</td>
+    <td>分享完成后由系统按缓存规则清理，我们无权访问</td>
+  </tr>
+  <tr>
+    <td>购买状态</td>
+    <td><strong>交易记录由华为应用市场持有</strong>；本机只保存一个「已解锁」标记</td>
+    <td>见华为应用市场的隐私声明</td>
+  </tr>
+</table>
+
+<p><strong>卸载应用即等于删除上述全部本机数据。</strong>因为没有任何一份副本存在于我们的服务器上，
+所以卸载之后我们也无法为你恢复——这一点请在使用前知悉。购买记录不受卸载影响，
+重新安装后可用应用内的「恢复购买」重新获取权益。</p>
+
+<h2><span class="n">5</span>第三方 SDK 清单</h2>
+
+<p>本应用<strong>只接入一个第三方 SDK</strong>，用于应用内购买，逐项列明如下：</p>
+
+<table>
+  <tr>
+    <th>项目</th><th>内容</th>
+  </tr>
+  <tr>
+    <td>SDK 名称</td>
+    <td>华为 HMS Core · 应用内支付（IAP Kit）</td>
+  </tr>
+  <tr>
+    <td>提供方</td>
+    <td>华为终端有限公司</td>
+  </tr>
+  <tr>
+    <td>使用目的</td>
+    <td>完成购买流程、校验收据真伪、查询已购商品以支持「恢复购买」</td>
+  </tr>
+  <tr>
+    <td>可能获取的信息</td>
+    <td>华为帐号标识（由 HMS Core 在系统层处理，本应用不接触）、订单号与商品标识、交易状态、设备型号与系统版本、网络类型</td>
+  </tr>
+  <tr>
+    <td>是否共享给其他方</td>
+    <td>否。我们只收到「该笔交易是否有效」的校验结果，不含你的支付信息</td>
+  </tr>
+  <tr>
+    <td>其隐私声明</td>
+    <td><a href="https://consumer.huawei.com/cn/privacy/" target="_blank" rel="noopener">华为隐私声明（含应用内支付服务的个人信息处理规则）</a></td>
+  </tr>
+</table>
+
+<ul>
+  <li>你在购买时，<strong>支付由华为应用市场完成</strong>。我们不接触、不传输、不存储你的银行卡号、
+  支付账号、账单地址或任何支付凭证。</li>
+  <li>除上述一项外，<strong>本应用不接入广告、统计、推送、社交分享、地图、云存储、崩溃上报等
+  任何其他第三方 SDK</strong>。</li>
+</ul>
+
+<h2><span class="n">6</span>未成年人</h2>
+
+<p>本应用是通用效率工具，<strong>不面向 14 周岁以下的儿童单独提供服务</strong>，
+也不会有意收集儿童的任何个人信息（事实上我们不收集任何人的个人信息）。</p>
+
+<p>若未成年人使用本应用，建议在监护人指导下进行；涉及应用内购买时，请由监护人完成支付。
+如果监护人认为存在不当使用，可通过第 9 节的邮箱联系我们，我们会在核实后协助处理。</p>
+
+<h2><span class="n">7</span>你的权利</h2>
+
+<p>由于数据都在你自己的设备上，这些权利你可以<strong>直接行使，无需向我们申请</strong>：</p>
+
+<ul>
+  <li><strong>查阅与导出</strong>——稿件在应用内随时可看；文本可复制或导出为文件。</li>
+  <li><strong>删除</strong>——应用内删除单篇稿件，或在系统设置中「清除数据」，或直接卸载应用。</li>
+  <li><strong>撤回授权</strong>——系统设置 → 应用 → 朴研提词器 → 权限，随时关闭麦克风、相机。
+  关闭后对应功能不可用，其他功能不受影响。</li>
+  <li><strong>拒绝联网</strong>——本应用断网可正常使用全部核心功能（仅购买需要联网）。
+  你也可以在系统设置中直接禁止本应用使用移动数据与 Wi-Fi。</li>
+</ul>
+
+<p>逐项的操作路径、以及通过邮箱提出请求的方式，独立发布在
+<a href="./data-rights-android.html">《个人信息权利与删除申请》</a>一页。
+我们承诺在收到申请后 <strong>15 个工作日</strong>内答复。</p>
+
+<h2><span class="n">8</span>本政策的变更</h2>
+
+<p>如果未来版本新增了需要联网或需要收集信息的功能（例如云同步、账号体系），
+我们会在<strong>该功能上线前</strong>更新本政策，并在应用内以显著方式提示你，必要时重新征得你的同意。</p>
+
+<p>本政策的更新版本会发布在本页面，并更新顶部的版本号与日期。<strong>历史版本可向我们索取。</strong></p>
+
+<h2><span class="n">9</span>联系我们</h2>
+
+<table>
+  <tr><th>邮箱</th><td><a href="mailto:rongyu_314@qq.com">rongyu_314@qq.com</a></td></tr>
+  <tr><th>开发者</th><td>荣誉（个人开发者）</td></tr>
+  <tr><th>通信地址</th><td>陕西省咸阳市秦都区观澜壹号北区一号楼 602 室</td></tr>
+  <tr><th>答复时限</th><td>收到后 15 个工作日内</td></tr>
+</table>
+
+<p>如果你认为我们的处理行为损害了你的合法权益，且与我们协商未能解决，
+你可以向开发者所在地的<strong>市场监督管理部门</strong>或<strong>网信部门</strong>投诉举报。</p>
+
+<footer>
+  <p class="row"><strong>朴研提词器</strong> · Android 版隐私政策 V1.3 · 2026-11-28</p>
+  <p class="row">开发者：荣誉（个人开发者）</p>
+  <p class="row">应用备案号：陕ICP备20260354224号-1A</p>
+  <p class="row">
+    <a href="./data-rights-android.html">个人信息权利与删除申请</a> ·
+    <a href="./terms.html">用户协议</a> ·
+    <a href="mailto:rongyu_314@qq.com">联系我们</a>
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
